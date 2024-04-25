@@ -1,0 +1,14 @@
+{
+    "version": "1",
+    "branches": [
+        "*"
+    ],
+    "applications": [
+        {
+            "name": "JWT-Generate",
+            "slug": "jwtGenerate",
+            "version": "0.0.1",
+            "rootDir": "/apps/jwt-generate"
+        }
+    ]
+}
