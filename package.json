@@ -3,7 +3,7 @@
         "build": "stac ."
     },
     "devDependencies": {
-        "@klave/sdk": "0.8.2",
+        "@klave/sdk": "0.10.0-dev.5",
         "assemblyscript": "^0.27.22",
         "tslib": "^2.6.2",
         "visitor-as": "^0.11.4"

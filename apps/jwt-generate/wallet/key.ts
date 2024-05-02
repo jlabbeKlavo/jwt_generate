@@ -94,7 +94,12 @@ export class Key {
             this.id = b64encode(convertToUint8Array(Crypto.getRandomValues(64)));
             this.type = algorithm;
             this.description = description;
-            let key = Crypto.ECDSA.importKey(format, keyData, extractable, usages, this.id);
+            let keyPair: Crypto.SimpleKeyPair = {
+                publicKey: null,
+                privateKey: keyData
+            };
+
+            let key = Crypto.ECDSA.importKey(this.id, keyPair, format, extractable);
             if (key) {
                 emit(`SUCCESS: Key '${this.id}' has been imported`);
                 return true;
